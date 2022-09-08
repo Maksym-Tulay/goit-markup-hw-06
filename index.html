@@ -406,7 +406,7 @@
           </address>
         </div>
         <div class="footer-smlist-container">
-          <p class="footer-smlist-title">Приєднуйтесь</p>
+          <p class="footer-smlist-descr">Приєднуйтесь</p>
           <ul class="footer-smlist">
             <li>
               <a href="https://www.instagram.com/" class="footer-smlist-link">
@@ -442,20 +442,25 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form">
-          <div class="footer-form-field">
-            <label for="email" class="footer-form-label"
-              >Підпишіться на розсилку</label
-            >
-            <input
-              type="email"
-              name="email"
-              autocomplete="email"
-              placeholder="E-mail"
-            />
-            <button type="submit">Підписатися</button>
-          </div>
-        </form>
+        <div class="footer-form-container">
+          <p class="footer-form-descr">Підпишіться на розсилку</p>
+          <form class="footer-form">
+            <label for="email" class="footer-form-label">
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-form-button">
+              Підписатися
+              <svg class="send-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -467,6 +472,29 @@
             <use href="./images/sprite.svg#icon-close-black"></use>
           </svg>
         </button>
+        <form class="modal-window-form">
+          <fieldset>
+            <legend>Залиште свої дані, ми вам передзвонимо</legend>
+            <label class="">
+              Ім'я
+              <input type="text" name="username" autofocus />
+            </label>
+            <label class="">
+              Телефон
+              <input type="tel" name="phone_number" />
+            </label>
+            <label class="">
+              Пошта
+              <input type="email" name="username" />
+            </label>
+            <label class="">
+              Коментар
+              <textarea name="feedback" placeholder="Введіть текст"></textarea>
+            </label>
+          </fieldset>
+
+          <button type="submit">Відправити</button>
+        </form>
       </div>
     </div>
 
