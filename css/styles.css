@@ -837,6 +837,7 @@ a {
 /* Footer smlist */
 
 .footer-smlist-container {
+  margin-right: 93px;
 }
 
 .footer-smlist-title {
@@ -881,6 +882,12 @@ a {
 
   fill: var(--body-background-color);
 }
+
+.footer-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .backdrop {
   position: fixed;
