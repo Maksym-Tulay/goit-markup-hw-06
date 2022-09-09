@@ -1,3 +1,5 @@
+/*================= MAIN STYLING RULES ================== */
+
 :root {
   --body-text-color: rgba(33, 33, 33, 100%);
   --logo-text-color: rgba(0, 0, 0, 100%);
@@ -71,7 +73,9 @@ a {
   text-decoration: none;
 }
 
-/* header*/
+/*================= / MAIN STYLING RULES ================== */
+
+/*================= HEADER ================== */
 
 .page-header {
   background-color: var(--body-background-color);
@@ -87,7 +91,7 @@ a {
   align-items: center;
 }
 
-/* logo */
+/*================= LOGO HEADER ================== */
 
 .logo-header {
   display: block;
@@ -121,8 +125,10 @@ a {
   color: var(--blue-color);
 }
 
-/* site navigation */
+/*================= / LOGO HEADER ================== */
 
+/*================= HEADER MAIN NAVIGATION ================== */
+ 
 .header-nav {
   display: flex;
   flex-direction: row;
@@ -167,7 +173,10 @@ a {
   border-radius: 2px;
 }
 
-/* header-contact */
+/*================= / HEADER MAIN NAVIGATION ================== */
+
+
+/*================= HEADER CONTACT BLOCK ================== */
 
 .contact-nav {
   display: flex;
@@ -206,9 +215,13 @@ a {
   color: var(--blue-color);
 }
 
-/* студія main section */
+/*================= / HEADER CONTACT BLOCK ================== */
 
-/* hero-section */
+/*================= / HEADER ================== */
+
+/*================= INDEX MAIN SECTION ================== */
+
+/*================= HERO SECTION ================== */
 
 .index-hero {
   margin-bottom: 0;
@@ -272,7 +285,10 @@ a {
   background-color: var(--blue-color);
 }
 
-/* specialities section */
+/*================= / HERO SECTION ================== */
+
+/*================= SPECIALITIES SECTION ================== */
+
 
 .index-aside {
   margin: top 0;
@@ -356,7 +372,9 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* worklist section */
+/*================= / SPECIALITIES SECTION ================== */
+
+/*================= WORKLIST SECTION ================== */
 
 .index-work-section {
   margin: top 0;
@@ -427,7 +445,10 @@ a {
   background-color: var(--item-overlay-backgroundcolor);
 }
 
-/* teamlist section */
+/*================= / WORKLIST SECTION ================== */
+
+
+/*================= TEAMLIST SECTION ================== */
 
 .index-teamlist-section {
   background-color: var(--grey-background-color);
@@ -532,7 +553,9 @@ a {
   fill: var(--body-background-color);
 }
 
-/* Clientlist section */
+/*================= / TEAMLIST SECTION ================== */
+
+/*================= CLIENTLIST SECTION ================== */
 
 .index-clientlist-section {
   text-align: center;
@@ -592,10 +615,13 @@ a {
   fill: var(--blue-color);
 }
 
-/* портфоліо main section*/
+/*================= / CLIENTLIST SECTION ================== */
 
-.main {
-}
+/*================= / INDEX MAIN SECTION ================== */
+
+/*================= PORTFOLIO MAIN SECTION ================== */
+
+/*================= GALLERY PORTFOLIO ================== */
 
 .portfolio-section {
   padding-top: 94px;
@@ -744,7 +770,10 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* footer*/
+/*================= / GALLERY PORTFOLIO ================== */
+
+
+/*================= FOOTER ================== */
 
 .footer {
   padding-top: 60px;
@@ -771,7 +800,7 @@ a {
   /* margin-right: 70px; */
 }
 
-/* Footer logo*/
+/* ----------------- FOOTER LOGO ------------------- */
 
 .logo-footer {
   display: block;
@@ -837,7 +866,7 @@ Summary   letter-spacing: 0.03em;
   letter-spacing: 0.03em;
 }
 
-/* Footer smlist */
+/* ------------- FOOTER SMLIST -------------- */
 
 .footer-smlist-container {
 }
@@ -885,7 +914,7 @@ Summary   letter-spacing: 0.03em;
   fill: var(--body-background-color);
 }
 
-/* Footer form */
+/*------------- FOOTER FORM -------------*/
 
 .footer-form-container {
   width: 570px;
@@ -963,7 +992,9 @@ Summary   letter-spacing: 0.03em;
   fill: var(--body-background-color);
 }
 
-/* Modal window */
+/*================= / FOOTER ================== */
+
+/*================= MODAL WINDOW ================== */
 
 .backdrop {
   position: fixed;
@@ -1032,3 +1063,5 @@ Summary   letter-spacing: 0.03em;
 
   transform: translate(-50%, -50%);
 }
+
+/*================= / MODAL WINDOW ================== */
