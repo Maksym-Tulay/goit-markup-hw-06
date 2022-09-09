@@ -445,7 +445,7 @@
         <div class="footer-form-container">
           <p class="footer-form-title">Підпишіться на розсилку</p>
           <form class="footer-form">
-            <label for="email" class="footer-form-label">
+            <label class="footer-form-label">
               <input
                 type="email"
                 name="user_email"
@@ -523,14 +523,21 @@
             ></textarea>
           </label>
           <label class="modal-form-check-field">
-            <input type="checkbox" name="user_policy_agreement" required class="modal-form-check"/>
+            <input
+              type="checkbox"
+              name="user_policy_agreement"
+              required
+              class="modal-form-check"
+            />
             <svg class="modal-form-check-icon-unchecked">
               <use href="./images/icons.svg#icon-unchecked"></use>
             </svg>
             <svg class="modal-form-check-icon-checked">
               <use href="./images/icons.svg#icon-checked"></use>
             </svg>
-            Погоджуюся з розсилкою та приймаю &nbsp;<a href="">Умови договору</a>
+            Погоджуюся з розсилкою та приймаю &nbsp;<a href=""
+              >Умови договору</a
+            >
           </label>
           <button type="submit" class="modal-form-button">Відправити</button>
         </form>
@@ -540,4 +547,3 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
-
