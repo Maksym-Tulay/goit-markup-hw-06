@@ -1,10 +1,11 @@
-/*================= MAIN STYLING RULES ================== */
+/*================= MAIN CSS RULES ================== */
 
 :root {
   --body-text-color: rgba(33, 33, 33, 100%);
   --logo-text-color: rgba(0, 0, 0, 100%);
-  --blue-color: rgba(33, 150, 243, 100%);
+  --accent-blue-color: rgba(33, 150, 243, 100%);
   --list-text-color: rgba(117, 117, 117, 100%);
+  --modal-form-placeholder-color: rgba(117, 117, 117, 50%);
   --body-background-color: rgba(255, 255, 255, 100%);
   --grey-background-color: rgba(245, 244, 250, 100%);
   --footer-background-color: rgba(47, 48, 58, 100%);
@@ -25,7 +26,7 @@
 html {
   box-sizing: border-box;
 }
-/* Border-box */
+
 *,
 *::before,
 *::after {
@@ -73,7 +74,13 @@ a {
   text-decoration: none;
 }
 
-/*================= / MAIN STYLING RULES ================== */
+input,
+textarea {
+  padding: 0;
+  margin: 0;
+}
+
+/*================= / MAIN CSS RULES ================== */
 
 /*================= HEADER ================== */
 
@@ -91,7 +98,7 @@ a {
   align-items: center;
 }
 
-/*================= LOGO HEADER ================== */
+/*----------------- LOGO HEADER -------------------- */
 
 .logo-header {
   display: block;
@@ -116,19 +123,19 @@ a {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
   letter-spacing: 0.03em;
 }
 
 .logo-header:hover,
 .logo-header:focus {
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
 }
 
-/*================= / LOGO HEADER ================== */
+/*-------------------- / LOGO HEADER ---------------------- */
 
-/*================= HEADER MAIN NAVIGATION ================== */
- 
+/*--------------------------- HEADER MAIN NAVIGATION --------------------------- */
+
 .header-nav {
   display: flex;
   flex-direction: row;
@@ -160,7 +167,7 @@ a {
 }
 
 .current-item a {
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
 }
 
 .current-item::after {
@@ -168,15 +175,14 @@ a {
   width: 100%;
   height: 4px;
   content: "";
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
 
   border-radius: 2px;
 }
 
-/*================= / HEADER MAIN NAVIGATION ================== */
+/*-------------------------- / HEADER MAIN NAVIGATION ----------------------- */
 
-
-/*================= HEADER CONTACT BLOCK ================== */
+/*---------------------- HEADER CONTACT BLOCK ---------------------------- */
 
 .contact-nav {
   display: flex;
@@ -212,16 +218,16 @@ a {
 .contact-nav .contact-link:hover,
 .main-nav .item:focus,
 .contact-nav .contact-link:focus {
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
 }
 
-/*================= / HEADER CONTACT BLOCK ================== */
+/*------------------------ / HEADER CONTACT BLOCK ------------------------ */
 
 /*================= / HEADER ================== */
 
 /*================= INDEX MAIN SECTION ================== */
 
-/*================= HERO SECTION ================== */
+/*------------------------- HERO SECTION ------------------------ */
 
 .index-hero {
   margin-bottom: 0;
@@ -268,7 +274,7 @@ a {
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -282,13 +288,12 @@ a {
 }
 
 .hero-button:focus {
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
 }
 
-/*================= / HERO SECTION ================== */
+/*---------------------- / HERO SECTION --------------------- */
 
-/*================= SPECIALITIES SECTION ================== */
-
+/*------------------ SPECIALITIES SECTION -------------------- */
 
 .index-aside {
   margin: top 0;
@@ -372,9 +377,9 @@ a {
   letter-spacing: 0.03em;
 }
 
-/*================= / SPECIALITIES SECTION ================== */
+/*------------------ / SPECIALITIES SECTION ----------------------- */
 
-/*================= WORKLIST SECTION ================== */
+/*---------------------------- WORKLIST SECTION --------------------------- */
 
 .index-work-section {
   margin: top 0;
@@ -388,7 +393,7 @@ a {
 
 .index-work-section a:hover,
 .index-work-section a:focus {
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
 }
 
 .index-worklist {
@@ -445,10 +450,9 @@ a {
   background-color: var(--item-overlay-backgroundcolor);
 }
 
-/*================= / WORKLIST SECTION ================== */
+/*------------------------- / WORKLIST SECTION ------------------------- */
 
-
-/*================= TEAMLIST SECTION ================== */
+/*------------------------ TEAMLIST SECTION ------------------------ */
 
 .index-teamlist-section {
   background-color: var(--grey-background-color);
@@ -536,7 +540,7 @@ a {
 
 .smlist-link:hover,
 .smlist-link:focus {
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
 }
 
 .smlist-icon {
@@ -553,9 +557,9 @@ a {
   fill: var(--body-background-color);
 }
 
-/*================= / TEAMLIST SECTION ================== */
+/*----------------------- / TEAMLIST SECTION ----------------------- */
 
-/*================= CLIENTLIST SECTION ================== */
+/*----------------------- CLIENTLIST SECTION ----------------- */
 
 .index-clientlist-section {
   text-align: center;
@@ -597,8 +601,8 @@ a {
 
 .clientlist-link:hover,
 .clientlist-link:focus {
-  fill: var(--blue-color);
-  border-color: var(--blue-color);
+  fill: var(--accent-blue-color);
+  border-color: var(--accent-blue-color);
 }
 
 .clientlist-icon {
@@ -612,16 +616,16 @@ a {
 
 .clientlist-link:hover .clientlist-icon,
 .clientlist-link:focus .clientlist-icon {
-  fill: var(--blue-color);
+  fill: var(--accent-blue-color);
 }
 
-/*================= / CLIENTLIST SECTION ================== */
+/*-------------------- / CLIENTLIST SECTION ------------------ */
 
 /*================= / INDEX MAIN SECTION ================== */
 
 /*================= PORTFOLIO MAIN SECTION ================== */
 
-/*================= GALLERY PORTFOLIO ================== */
+/*------------------- GALLERY PORTFOLIO ----------------- */
 
 .portfolio-section {
   padding-top: 94px;
@@ -669,7 +673,7 @@ a {
 
 .gallery-nav button:focus,
 .gallery-nav button:hover {
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
   color: var(--body-background-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -770,8 +774,9 @@ a {
   letter-spacing: 0.03em;
 }
 
-/*================= / GALLERY PORTFOLIO ================== */
+/*----------------- / GALLERY PORTFOLIO ----------------- */
 
+/*================= / PORTFOLIO MAIN SECTION ================== */
 
 /*================= FOOTER ================== */
 
@@ -821,10 +826,12 @@ a {
 
 .logo-footer:hover,
 .logo-footer:focus {
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
 }
 
-/* Address list */
+/* ----------------- / FOOTER LOGO ------------------- */
+
+/* ----------------- ADDRESS LIST ------------------- */
 
 .address-list {
   /* outline: 2px solid peru; */
@@ -841,7 +848,7 @@ a {
 
 .address-list a:hover,
 .address-list a:focus {
-  color: var(--blue-color);
+  color: var(--accent-blue-color);
 }
 
 .item-address a {
@@ -852,7 +859,7 @@ a {
   font-size: 14px;
   line-height: 1.5;
   color: var(--body-background-color);
-Summary   letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 }
 
 .item-link a {
@@ -865,6 +872,8 @@ Summary   letter-spacing: 0.03em;
   color: var(--address-text-color);
   letter-spacing: 0.03em;
 }
+
+/* ----------------- / ADDRESS LIST ------------------- */
 
 /* ------------- FOOTER SMLIST -------------- */
 
@@ -904,7 +913,7 @@ Summary   letter-spacing: 0.03em;
 
 .footer-smlist-link:hover,
 .footer-smlist-link:focus {
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
 }
 
 .footer-smlist-icon {
@@ -913,6 +922,7 @@ Summary   letter-spacing: 0.03em;
 
   fill: var(--body-background-color);
 }
+/* ----------------- / FOOTER SMLIST ------------------- */
 
 /*------------- FOOTER FORM -------------*/
 
@@ -920,7 +930,7 @@ Summary   letter-spacing: 0.03em;
   width: 570px;
 }
 
-.footer-form-descr {
+.footer-form-title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -952,7 +962,7 @@ Summary   letter-spacing: 0.03em;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  color: var(--address-text-color);
+  color: var(--body-background-color);
 }
 
 .footer-form-label input::placeholder {
@@ -964,7 +974,7 @@ Summary   letter-spacing: 0.03em;
 }
 
 .footer-form-label input:focus {
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--accent-blue-color);
 }
 
 .footer-form-button {
@@ -975,7 +985,7 @@ Summary   letter-spacing: 0.03em;
   height: 50px;
   padding: 10px 28px;
 
-  background-color: var(--blue-color);
+  background-color: var(--accent-blue-color);
   box-shadow: 0px 4px 4px var(--form-submit-button-shadow-color);
   border: none;
   border-radius: 4px;
@@ -991,6 +1001,8 @@ Summary   letter-spacing: 0.03em;
 .send-icon {
   fill: var(--body-background-color);
 }
+
+/* ----------------- / FOOTER FORM ------------------- */
 
 /*================= / FOOTER ================== */
 
@@ -1022,11 +1034,14 @@ Summary   letter-spacing: 0.03em;
   top: 50%;
   left: 50%;
 
+  width: 528px;
+  height: 581px;
+
+  padding: 40px;
+
   transform: translate(-50%, -50%);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  width: 528px;
-  height: 581px;
   background-color: var(--body-background-color);
 }
 
@@ -1051,17 +1066,215 @@ Summary   letter-spacing: 0.03em;
   width: 18px;
   height: 18px;
 
-  /* transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   fill: var(--body-text-color);
 }
 
-.modal-window-form {
+.modal-close-button .icon-close:hover,
+.modal-close-button .icon-close:focus {
+  fill: var(--accent-blue-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  /*   
   position: absolute;
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+}
+
+.modal-form-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--body-text-color);
+}
+
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-form-field-descr {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--list-text-color);
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+
+  padding: 11px 11px 11px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--body-text-color);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-blue-color);
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+}
+
+.modal-form-input-icon {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--accent-blue-color);
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  resize: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--body-text-color);
+}
+
+.modal-form-message:focus {
+  outline: none;
+  border-color: var(--accent-blue-color);
+}
+
+.modal-form-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--modal-form-placeholder-color);
+}
+
+.modal-form-check-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--list-text-color);
+}
+
+.modal-form-check {
+  position: absolute;
+  appearance: none;
+}
+
+.modal-form-check-icon-unchecked {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+.modal-form-check-icon-checked {
+  display: none;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  fill: var(--accent-blue-color);
+}
+
+.modal-form-check:checked + .modal-form-check-icon-unchecked {
+  display: none;
+}
+
+.modal-form-check:checked ~ .modal-form-check-icon-checked {
+  display: inline;
+}
+
+.modal-form-check:focus + .modal-form-check-icon-unchecked {
+  box-shadow: 0 0 0 1px var(--accent-blue-color);
+}
+.modal-form-check:focus ~ .modal-form-check-icon-checked {
+  box-shadow: 0 0 0 1px var(--accent-blue-color);
+}
+
+.modal-form-check-field a {
+  position: relative;
+  color: var(--accent-blue-color);
+  outline: none;
+}
+
+.modal-form-check-field a::after{
+  display: block;
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: var(--accent-blue-color);
+
+}
+
+.modal-form-button {
+  align-self: center;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+
+  background-color: var(--accent-blue-color);
+  box-shadow: 0px 4px 4px var(--form-submit-button-shadow-color);
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--body-background-color);
+  cursor: pointer;
 }
 
 /*================= / MODAL WINDOW ================== */
